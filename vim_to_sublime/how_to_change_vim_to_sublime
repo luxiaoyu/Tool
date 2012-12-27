@@ -1,0 +1,17 @@
+Step By Step
+~~~~~~~~~~~~
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+cp .vimrc ~/.vimrc
+open vim, run ":BundleInstall"
+cp vim-autocomplpop.zip /usr/share/vim/vim73
+unzip vim-autocomplpop.zip
+
+Tips
+~~~~
+Find files:            ctrl+p
+Look up manual:        F2
+generate tags:         F3
+check php error:       F5
+close atuo complete:   F6
+open & close NERDTree: F11
+open & close Tagbar:   F12

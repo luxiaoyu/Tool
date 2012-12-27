@@ -1,0 +1,44 @@
+#se the startup message
+startup_message off
+term linux
+##use ` as the Global Key
+## escape ``
+##set a biger buffer
+defscrollback 4096
+#设置状态栏
+hardstatus alwayslastline                                                                                                                   
+shelltitle "$|bash"
+hardstatus string '%{= kG}[%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{kB} %d/%m %{w}%c %{g}]'
+
+##shutdown the noise
+vbell off
+
+## w to show the window list
+bind w windowlist -b
+bind ^w windowlist -b
+##initial apps to run
+screen
+screen
+screen
+screen
+screen
+screen
+select 0
+
+#进行快捷键的绑定
+bindkey -k k1 screen
+bindkey -k k2 title
+bindkey -k k3 monitor
+bindkey -k k4 silence
+bindkey -k k5 colon
+bindkey -k k6 split
+#bindkey -k k; focus
+bindkey -k k7 focus
+#bindkey -k k8 only
+bindkey -k k9 detach
+bindkey -k F1 prev
+bindkey -k F2 next
+attrcolor u "-u B"
+sessionname luxiaoyu
+autodetach on
+

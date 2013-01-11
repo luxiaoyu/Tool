@@ -1,5 +1,6 @@
 Step By Step
 ~~~~~~~~~~~~
+sudo apt-get install curl vim-gui-common
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 cp .vimrc ~/.vimrc
 open vim, run ":BundleInstall"

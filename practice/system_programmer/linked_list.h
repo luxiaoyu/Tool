@@ -16,4 +16,7 @@ typedef enum _DListRet
 	DLIST_RET_INVALID_PARAM
 }DListRet;
 
+DListRet dlist_append(DListNode* head, void* data);
+size_t   dlist_length(DListNode* head);
+
 #endif

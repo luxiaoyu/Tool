@@ -22,5 +22,7 @@ DListRet dlist_insert(DListNode* head, size_t index, void* data);
 size_t   dlist_length(DListNode* head);
 DListRet dlist_get_by_index(DListNode* head, size_t index, void** data);
 DListRet dlist_set_by_index(DListNode* head, size_t index, void* data);
+typedef DListRet (*DListVisitFunc)(void* ctx, void* data);
+DListRet dlist_foreach(DListNode* head, DListVisitFunc visit, void* ctx);
 
 #endif

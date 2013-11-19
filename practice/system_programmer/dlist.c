@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "linked_list.h"
+#include "dlist.h"
 
 static DListNode* dlist_get_node(DListNode* head, size_t index)
 {
@@ -26,13 +26,12 @@ static DListNode* dlist_create_node(void* data)
     return node;
 }
 
-DListNode dlist_print(DListNode* head)
+DListRet dlist_foreach(DListNode* head, DListVisitFunc visit, void* ctx)
 {
 	while((head = head->next) != NULL)
 	{
-		printf("%d", (int)(head->data));
+        visit(ctx, head->data);
 	}
-	printf("\n");
 }
 
 DListRet dlist_append(DListNode* head, void* data)
@@ -141,54 +140,3 @@ DListRet dlist_set_by_index(DListNode* head, size_t index, void* data)
     return DLIST_RET_OK;
 }
 
-int main()
-{
-	DListNode* head = (DListNode*)malloc(sizeof(DListNode));
-	head->data = (void*)0;
-	head->prev = NULL;
-	head->next = NULL;
-
-    // test dlist_append
-	int i = 0;
-	for (i = 1; i < 10; i ++)
-	{
-        /**
-         * warning: cast from pointer to integer of different sizeof
-         * printf("%d %d\n", sizeof(void*), sizeof(int));
-         */
-		dlist_append(head, (void*)i);
-	}
-	dlist_print(head);
-
-    // test dlist_length
-    printf("dlist_length: %d\n", dlist_length(head));
-
-    // test dlist_delete
-    if (dlist_delete(head, 5) == DLIST_RET_INVALID_PARAM)
-    {
-        printf("dlist_delete(head, 5) == DLIST_RET_INVALID_PARAM \n");
-    }
-	dlist_print(head);
-
-    // test dlist_insert
-    dlist_insert(head, 5, (void*)5);
-	dlist_print(head);
-
-    // test dlist_get_by_index
-    void** data = (void**)malloc(sizeof(void**));
-    if(dlist_get_by_index(head, 3, data) == DLIST_RET_OK)
-    {
-        printf("dlist_get_by_index(3):%d\n", (int)(*data));
-    }else
-    {
-        printf("dlist_get_by_index: DLIST_RET_INVALID_PARAM\n");
-    }
-
-    // dlist_set_by_index
-    dlist_set_by_index(head, 3, (void*)4);
-	dlist_print(head);
-    dlist_set_by_index(head, 3, (void*)3);
-	dlist_print(head);
-
-    //
-}

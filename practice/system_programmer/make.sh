@@ -1,5 +1,5 @@
 #!/bin/bash
-gcc -g linked_list.c 
+gcc -g dlist.c test_dlist.c
 if [ $? -ne 0 ]; then
     echo "########### complie error ##########"
 	exit 1

@@ -10,7 +10,7 @@ package com.baidu.chunlei.exercise;
  */
 
 class MyThread extends Thread {
-    // 锁一定要用类成员，否则每个对象都用自己的成员锁就相当于没加锁
+    // 锟斤拷一锟斤拷要锟斤拷锟斤拷锟皆憋拷锟斤拷锟斤拷锟矫匡拷锟斤拷锟斤拷锟斤拷锟斤拷约锟斤拷某锟皆憋拷锟斤拷锟洁当锟斤拷没锟斤拷锟斤拷
     private static String mutex = "";
 
     public void work() throws InterruptedException {
@@ -48,7 +48,7 @@ public class TestThread {
         //        new MyThread().start();
         //        new MyThread().start();
         try {
-            Thread.sleep(1000 * 10);
+            Thread.sleep(1000 * 3);
         } catch (InterruptedException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

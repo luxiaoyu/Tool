@@ -1,6 +1,5 @@
 package com.baidu.chunlei.exercise;
 
-import java.util.ArrayList;
 
 /**
  * @author luxiaoyu01@baidu.com

@@ -20,6 +20,7 @@ public class TestInteger {
         integer++;
         integer++;
         System.out.println(mCursors.get(0));
+        System.out.println(integer);
     }
 
 }

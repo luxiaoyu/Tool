@@ -1,6 +1,6 @@
 package com.baidu.chunlei.exercise.string;
 
-import com.baidu.lxy.CommonLib;
+import com.baidu.lxy.Strings;
 
 /**
  * new StringTokenizer(str, ","); 比 str.split(",");
@@ -35,7 +35,7 @@ public class TestStringTokenizer {
 
         start = System.currentTimeMillis();
         for (int i = 0; i < times; i++) {
-            CommonLib.splitWithStringTokenizer("a,b,c,d");
+            Strings.splitWithStringTokenizer("a,b,c,d");
         }
         System.out.println("useStringTokenizer: " + (System.currentTimeMillis() - start));
     }

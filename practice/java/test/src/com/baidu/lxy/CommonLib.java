@@ -13,16 +13,6 @@ import java.util.StringTokenizer;
  */
 public class CommonLib {
 
-    public static String[] splitWithStringTokenizer(String str) {
-        StringTokenizer st = new StringTokenizer(str, ",");
-        String[] split = new String[st.countTokens()];
-        int i = 0;
-        while (st.hasMoreTokens()) {
-            split[i++] = st.nextToken();
-        }
-        return split;
-    }
-
     public static byte[] Inputstream2Bytes(InputStream input) {
         byte[] byt = null;
         if (null == input) {

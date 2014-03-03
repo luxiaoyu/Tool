@@ -1,8 +1,6 @@
 package com.baidu.chunlei.exercise.string;
 
-import java.util.StringTokenizer;
-
-import com.sun.xml.internal.ws.util.StringUtils;
+import com.baidu.lxy.CommonLib;
 
 /**
  * new StringTokenizer(str, ","); 比 str.split(",");
@@ -16,16 +14,6 @@ import com.sun.xml.internal.ws.util.StringUtils;
  * @todo
  */
 public class TestStringTokenizer {
-
-    private static void useStringTokenizer(String str) {
-        StringTokenizer st = new StringTokenizer(str, ",");
-        String[] split = new String[st.countTokens()];
-        int i = 0;
-        while (st.hasMoreTokens()) {
-            split[i++] = st.nextToken();
-        }
-    }
-
     private static void useStringSplit(String str) {
         String[] split = str.split(",");
     }
@@ -47,7 +35,7 @@ public class TestStringTokenizer {
 
         start = System.currentTimeMillis();
         for (int i = 0; i < times; i++) {
-            useStringTokenizer("a,b,c,d");
+            CommonLib.splitWithStringTokenizer("a,b,c,d");
         }
         System.out.println("useStringTokenizer: " + (System.currentTimeMillis() - start));
     }

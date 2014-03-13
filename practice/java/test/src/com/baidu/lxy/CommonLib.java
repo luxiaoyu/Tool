@@ -3,7 +3,6 @@ package com.baidu.lxy;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.StringTokenizer;
 
 /**
  * @author luxiaoyu01@baidu.com

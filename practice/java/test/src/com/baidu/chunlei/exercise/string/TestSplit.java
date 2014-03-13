@@ -11,8 +11,9 @@ public class TestSplit {
      * @param args
      */
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
-        String[] s = "a".split("\\|");
+//        String[] s = "a".split("\\|");
+//        String[] s = "R.id.name".split("\\.");
+        String[] s = "@file/10".split("/");
         for (String str : s){
             System.out.println("    "+str);
         }

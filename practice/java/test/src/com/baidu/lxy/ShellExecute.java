@@ -20,7 +20,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -113,8 +112,8 @@ public class ShellExecute {
     private final static long INTERVAL = 50;
 
     /**
-     * perform a function in timeout; return function's return value if function
-     * is over in timeout, or else return null
+     * perform a function in timeout; return function's return value if function is over in timeout,
+     * or else return null
      * 
      * @param <T>
      * @param callBack

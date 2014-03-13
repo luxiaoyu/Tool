@@ -17,6 +17,8 @@ public class TestIndexOf {
         // TODO Auto-generated method stub
         System.out.println("a/req".indexOf("/re"));
         System.out.println(getFunctionName("align"));
+        String aString = "@ref/abc";
+        System.out.println(aString.substring(5));
     }
 
 }

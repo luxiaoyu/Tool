@@ -8,6 +8,9 @@ package com.baidu.chunlei.exercise;
  */
 public class DynamicParameter {
 	static void sendAction(Object... args) {
+	    if (0 == args.length) {
+	        return;
+	    }
 		System.out.println("args.length:" + args.length);
 		
 		//action
@@ -29,5 +32,6 @@ public class DynamicParameter {
 //		_imgFilename.substring(_imgFilename.lastIndexOf(File.separator));
 		String[] data = {"0", "1", "2", "3", "4"};
 		DynamicParameter.sendAction("1", 2, data);
+		DynamicParameter.sendAction();
 	}
 }

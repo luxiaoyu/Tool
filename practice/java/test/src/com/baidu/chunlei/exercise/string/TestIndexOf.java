@@ -19,6 +19,7 @@ public class TestIndexOf {
         System.out.println(getFunctionName("align"));
         String aString = "@ref/abc";
         System.out.println(aString.substring(5));
+        System.out.println("a.b".substring(0, "a.b".indexOf('.')));
     }
 
 }

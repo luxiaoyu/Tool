@@ -25,19 +25,19 @@ public class TestStringTokenizer {
      * @param args
      */
     public static void main(String[] args) {
-        //        int times = 1000000;
-        int times = 100;
-        long start = System.currentTimeMillis();
-        for (int i = 0; i < times; i++) {
-            useStringSplit("a,b,c,d");
-        }
-        System.out.println("useStringSplit: " + (System.currentTimeMillis() - start));
-
-        start = System.currentTimeMillis();
-        for (int i = 0; i < times; i++) {
-            Strings.splitWithStringTokenizer("a,b,c,d");
-        }
-        System.out.println("useStringTokenizer: " + (System.currentTimeMillis() - start));
+//        //        int times = 1000000;
+//        int times = 100;
+//        long start = System.currentTimeMillis();
+//        for (int i = 0; i < times; i++) {
+//            useStringSplit("a,b,c,d");
+//        }
+//        System.out.println("useStringSplit: " + (System.currentTimeMillis() - start));
+//
+//        start = System.currentTimeMillis();
+//        for (int i = 0; i < times; i++) {
+//            Strings.splitWithStringTokenizer("a,b,c,d");
+//        }
+//        System.out.println("useStringTokenizer: " + (System.currentTimeMillis() - start));
     }
 
 }

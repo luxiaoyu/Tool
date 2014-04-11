@@ -6,30 +6,29 @@ package com.baidu.chunlei.exercise.string;
  */
 public class TestToLowCase {
 
+//    private static String simpleToLowerCase(String str) {
+//        int A = 'A';
+//        int Z = 'Z';
+//        int length = str.length();
+//        StringBuilder sb = null;
+//        
+//        for (int i = 0; i < length; i++) {
+//            char c = str.charAt(i);
+//            if (c >= A && c <= Z) {
+//                if (sb == null) {
+//                    sb = new StringBuilder(str);
+//                }
+//                sb.setCharAt(i, (char) (c + delta));
+//            }
+//        }
+//        
+//        return null == sb ? str : sb.toString();
+//    }
+    
+    final static int delta = 'a' - 'A';
     private static String simpleToLowerCase(String str) {
         int A = 'A';
         int Z = 'Z';
-        int delta = 'a' - 'A';
-        int length = str.length();
-        StringBuilder sb = null;
-        
-        for (int i = 0; i < length; i++) {
-            char c = str.charAt(i);
-            if (c >= A && c <= Z) {
-                if (sb == null) {
-                    sb = new StringBuilder(str);
-                }
-                sb.setCharAt(i, (char) (c + delta));
-            }
-        }
-        
-        return null == sb ? str : sb.toString();
-    }
-    
-    private static String simpleToLowerCase2(String str) {
-        int A = 'A';
-        int Z = 'Z';
-        int delta = 'a' - 'A';
         boolean changed = false;
         int length = str.length();
         char[] lowerCase = str.toCharArray();
@@ -64,14 +63,6 @@ public class TestToLowCase {
             ret = simpleToLowerCase(test);
         }
         System.out.println("simpleToLowerCase:" + (System.currentTimeMillis() - begin));
-        System.out.println("simpleToLowerCase:" + ret);
-        
-        begin = System.currentTimeMillis();
-        for (int i = 0; i < times; i++) {
-            ret = simpleToLowerCase2(test);
-        }
-        System.out.println("simpleToLowerCase2:" + (System.currentTimeMillis() - begin));
-        System.out.println("simpleToLowerCase2:" + ret);
     }
 
 }

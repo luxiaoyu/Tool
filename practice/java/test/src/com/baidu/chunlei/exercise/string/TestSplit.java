@@ -47,34 +47,25 @@ public class TestSplit {
 //        String[] s = "R.id.name".split("\\.");
         //        String[] s = "@file/10".split("/");
         int count = 100000;
-        String test = "a:::::bc:::::def:::::g:::::abcdfe";
+        String string = "a:::::bc:::::def:::::g:::::abcdfe";
         String token = ":::::";
         String[] splits = null;
         long begin = System.currentTimeMillis();
         for (int i = 0; i < count; i++) {
-            splits = test.split(token);
+            splits = string.split(token);
         }
         System.out.println("split:" + (System.currentTimeMillis() - begin));
-        for (String str : splits) {
-            System.out.println("@" + str);
-        }
         
         begin = System.currentTimeMillis();
         for (int i = 0; i < count; i++) {
-            splits = splitViaIndexOf(test, token);
+            splits = splitViaIndexOf(string, token);
         }
         System.out.println("splitViaIndex:" + (System.currentTimeMillis() - begin));
-        for (String str : splits) {
-            System.out.println("@" + str);
+        begin = System.currentTimeMillis();
+        for (int i = 0; i < count; i++) {
+            splitWithStringTokenizer(string);
         }
-        
-        String aString = "abc";
-        System.out.println(aString.substring(3, 3));
-//        begin = System.currentTimeMillis();
-//        for (int i = 0; i < count; i++) {
-//            splitWithStringTokenizer(test);
-//        }
-//        System.out.println("splitWithStringTokenizer:"+(System.currentTimeMillis() - begin));
+        System.out.println("splitWithStringTokenizer:"+(System.currentTimeMillis() - begin));
 //        String base = "a=b=";
 //        int index = base.indexOf('=');
 //        String rule = base.substring(0, index);

@@ -34,7 +34,7 @@ public class TestCache {
         System.out.println(System.currentTimeMillis() - begin);
         
         begin = System.currentTimeMillis();
-        // 头尾交替，模拟随机访问
+        // 随机访问
         for (int i = 0; i < size; i++) {
             int j = r.nextInt() % size;
             int k = j < 0 ? j * -1 : j;
@@ -43,4 +43,14 @@ public class TestCache {
         System.out.println(System.currentTimeMillis() - begin);
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

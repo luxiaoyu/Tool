@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/luxiaoyu01/Documents/GitHub/Tool/practice/java/test/protobuf-java-2.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/luxiaoyu01/Documents/GitHub/Tool/practice/java/test/lib/protobuf-java-2.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/luxiaoyu01/Documents/GitHub/Tool/practice/java/test/lib/jackson-all-1.7.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

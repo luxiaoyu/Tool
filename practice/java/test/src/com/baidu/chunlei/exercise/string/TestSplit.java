@@ -7,10 +7,10 @@ import java.util.StringTokenizer;
  * @author luxiaoyu01@baidu.com
  * @date 2014-2-10
  * @version
- * @todo 
+ * @todo
  */
 public class TestSplit {
-    public static String[] splitViaIndexOf(String target, String token) {
+    public static ArrayList<String> splitViaIndexOf(String target, String token) {
         int fromIndex = 0;
         int index = 0;
         int size = target.length() / (token.length() + 1);
@@ -26,36 +26,36 @@ public class TestSplit {
         if (target.length() != fromIndex) {
             strings.add(target.substring(fromIndex, target.length()));
         }
-        return strings.toArray(new String[strings.size()]);
+        return strings;
     }
-    
-    public static String[] splitWithStringTokenizer(String str) {
+
+    public static ArrayList<String> splitWithStringTokenizer(String str) {
         StringTokenizer st = new StringTokenizer(str, ":");
-        String[] split = new String[st.countTokens()];
+        ArrayList<String> split = new ArrayList<String>();
         int i = 0;
         while (st.hasMoreTokens()) {
-            split[i++] = st.nextToken();
+            split.add(st.nextToken());
         }
         return split;
     }
-    
+
     /**
      * @param args
      */
     public static void main(String[] args) {
-//        String[] s = "a".split("\\|");
-//        String[] s = "R.id.name".split("\\.");
+        //        String[] s = "a".split("\\|");
+        //        String[] s = "R.id.name".split("\\.");
         //        String[] s = "@file/10".split("/");
         int count = 100000;
         String string = "a:::::bc:::::def:::::g:::::abcdfe";
         String token = ":::::";
-        String[] splits = null;
+        ArrayList<String> splits = null;
         long begin = System.currentTimeMillis();
         for (int i = 0; i < count; i++) {
-            splits = string.split(token);
+            string.split(token);
         }
         System.out.println("split:" + (System.currentTimeMillis() - begin));
-        
+
         begin = System.currentTimeMillis();
         for (int i = 0; i < count; i++) {
             splits = splitViaIndexOf(string, token);
@@ -65,18 +65,18 @@ public class TestSplit {
         for (int i = 0; i < count; i++) {
             splitWithStringTokenizer(string);
         }
-        System.out.println("splitWithStringTokenizer:"+(System.currentTimeMillis() - begin));
-//        String base = "a=b=";
-//        int index = base.indexOf('=');
-//        String rule = base.substring(0, index);
-//        String targetIdString = base.substring(index + 1, base.length());
-//        System.out.println(rule);
-//        System.out.println(targetIdString);
-//        
-//        String[] splits = splitViaIndexOf("a:bc:def:g:::", ":");
-//        for (String str : splits) {
-//            System.out.println("@"+str);
-//        }
+        System.out.println("splitWithStringTokenizer:" + (System.currentTimeMillis() - begin));
+        //        String base = "a=b=";
+        //        int index = base.indexOf('=');
+        //        String rule = base.substring(0, index);
+        //        String targetIdString = base.substring(index + 1, base.length());
+        //        System.out.println(rule);
+        //        System.out.println(targetIdString);
+        //        
+        //        String[] splits = splitViaIndexOf("a:bc:def:g:::", ":");
+        //        for (String str : splits) {
+        //            System.out.println("@"+str);
+        //        }
     }
 
 }

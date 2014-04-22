@@ -26,6 +26,7 @@ public class TestToLowCase {
 //    }
     
     final static int delta = 'a' - 'A';
+    final static char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
     private static String simpleToLowerCase(String str) {
         int A = 'A';
         int Z = 'Z';
@@ -36,7 +37,7 @@ public class TestToLowCase {
         for (int i = 0; i < length; i++) {
             char c = lowerCase[i];
             if (c >= A && c <= Z) {
-                lowerCase[i] = (char) (c + delta);
+                lowerCase[i] = alphabet[c - A];
                 changed = true;
             }
         }

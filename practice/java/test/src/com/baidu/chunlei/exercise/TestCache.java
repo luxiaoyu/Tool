@@ -24,11 +24,13 @@ public class TestCache {
             a[i] = i;
         }
         
+        int y;
         long begin = System.currentTimeMillis();
         // 顺序访问
         for (int i = 0; i < size; i++) {
             int j = r.nextInt() % size;
             int k = j < 0 ? j * -1 : j;
+            y = k;
             x = a[i];
         }
         System.out.println(System.currentTimeMillis() - begin);

@@ -20,6 +20,17 @@ public class TestIndexOf {
         String aString = "@ref/abc";
         System.out.println(aString.substring(5));
         System.out.println("a.b".substring(0, "a.b".indexOf('.')));
+        String ref = "@file/10.png";
+        String prefix = ref.substring(1, ref.indexOf('/'));
+        System.out.println("prefix: " + prefix);
+//        String id = ref.substring(ref.indexOf('/') + 1);
+        String id = ref.substring("@file/".length());
+        System.out.println("id: "+ id);
+        String name = id.substring(0, id.lastIndexOf('.'));
+        System.out.println(name);
+        int indexPoint = ref.lastIndexOf('.');
+        String suffix = ref.substring(indexPoint + 1, ref.length());
+        System.out.println(suffix);
     }
 
 }

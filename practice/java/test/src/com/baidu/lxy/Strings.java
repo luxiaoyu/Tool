@@ -17,7 +17,7 @@
 package com.baidu.lxy;
 
 import java.util.ArrayList;
-import java.util.StringTokenizer;
+import java.util.Random;
 
 /**
  * A String util class.
@@ -158,4 +158,24 @@ public class Strings {
         }
         return strings.toArray(new String[strings.size()]);
     }
+    
+    private static final char[] CHAR_BASE = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                                  .toCharArray();
+
+    /**
+     * 生成指定长度的随机字符串，包含大小写字母和数字。
+     * 
+     * @param length 表示生成字符串的长度
+     * @return 随机字符串
+     */
+    public static String generateRandomString(int length) {
+        int bound = CHAR_BASE.length;
+        Random random = new Random();
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < length; i++) {
+            sb.append(CHAR_BASE[random.nextInt(bound)]);
+        }
+        return sb.toString();
+    }
+    
 }

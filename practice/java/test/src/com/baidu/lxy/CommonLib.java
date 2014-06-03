@@ -36,10 +36,8 @@ public class CommonLib {
      * Reallocates an array with a new size, and copies the contents of the old array to the new
      * array.
      * 
-     * @param oldArray
-     *            the old array, to be reallocated.
-     * @param newSize
-     *            the new array size.
+     * @param oldArray the old array, to be reallocated.
+     * @param newSize the new array size.
      * @return A new array with the same contents.
      */
     public static Object resizeArray(Object oldArray, int newSize) {
@@ -53,12 +51,31 @@ public class CommonLib {
         return newArray;
     }
 
-    /**
-     * @param args
-     */
-    public static void main(String[] args) {
-        // TODO Auto-generated method stub
-
+    public static long time(CallBack callback) {
+        long begin = System.currentTimeMillis();
+        callback.doSomething();
+        return System.currentTimeMillis() - begin;
     }
 
+    public interface CallBack<T> {
+        T doSomething();
+    }
+    
+
+    /**
+     * 生成指定长度的随机正整数。
+     * 
+     * @param length 随机数长度，不能大于19。因为a long can have 2(63)-1 is 9223372036854775807
+     *               Long.MAX_VALUE = 19位
+     * @return 随机正整数
+     */
+    public static long generateRandomNumber(int length) {
+        if (length >= 19) {
+            return -1;
+        }
+        long range = (long) Math.pow(10, length - 1);
+        long max = 9 * range;
+        long base = 1 * range;
+        return (long) (Math.random() * max + base);
+    }
 }

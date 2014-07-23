@@ -9,5 +9,6 @@
 			<attribute name="javadoc_location" value="jar:file:/C:/Users/luxiaoyu01/Documents/GitHub/Tool/practice/java/test/lib/guava-17.0-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/luxiaoyu01/Documents/GitHub/Tool/practice/java/test/lib/perf4j-0.9.16.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

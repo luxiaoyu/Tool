@@ -21,6 +21,9 @@ public class TestInteger {
         integer++;
         System.out.println(mCursors.get(0));
         System.out.println(integer);
+        
+        boolean b = 1>2;
+        System.out.println(b);
     }
 
 }

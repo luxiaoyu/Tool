@@ -159,7 +159,7 @@ public class Strings {
         return strings.toArray(new String[strings.size()]);
     }
     
-    private static final char[] CHAR_BASE = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    private static final char[] META_CHAR = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                                                   .toCharArray();
 
     /**
@@ -169,11 +169,11 @@ public class Strings {
      * @return 随机字符串
      */
     public static String generateRandomString(int length) {
-        int bound = CHAR_BASE.length;
+        int bound = META_CHAR.length;
         Random random = new Random();
         StringBuffer sb = new StringBuffer();
         for (int i = 0; i < length; i++) {
-            sb.append(CHAR_BASE[random.nextInt(bound)]);
+            sb.append(META_CHAR[random.nextInt(bound)]);
         }
         return sb.toString();
     }

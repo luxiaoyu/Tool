@@ -35,6 +35,8 @@
     "颜色主题设置
     set t_Co=256
     colorscheme molokai
+    "设置语法高亮
+    syntax on
     "zencoding 设置
     let g:user_zen_expandabbr_key='<S-O>'
     let g:use_zen_complete_tag = 1

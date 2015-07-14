@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/luxiaoyu01/Documents/GitHub/Tool/practice/java/test/lib/protobuf-java-2.5.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/luxiaoyu01/Documents/GitHub/Tool/practice/java/test/lib/jackson-all-1.7.6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/luxiaoyu01/Documents/GitHub/Tool/practice/java/test/lib/guava-17.0.jar" sourcepath="C:/Users/luxiaoyu01/Documents/GitHub/Tool/practice/java/test/lib/guava-17.0-sources.jar">
+	<classpathentry exported="true" kind="lib" path="/Users/luxiaoyu/android/github/Tool/practice/java/test/lib/protobuf-java-2.5.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/luxiaoyu/android/github/Tool/practice/java/test/lib/jackson-all-1.7.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/luxiaoyu/android/github/Tool/practice/java/test/lib/guava-17.0.jar" sourcepath="C:/Users/luxiaoyu01/Documents/GitHub/Tool/practice/java/test/lib/guava-17.0-sources.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="jar:file:/C:/Users/luxiaoyu01/Documents/GitHub/Tool/practice/java/test/lib/guava-17.0-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/luxiaoyu01/Documents/GitHub/Tool/practice/java/test/lib/perf4j-0.9.16.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/luxiaoyu/android/github/Tool/practice/java/test/lib/perf4j-0.9.16.jar"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

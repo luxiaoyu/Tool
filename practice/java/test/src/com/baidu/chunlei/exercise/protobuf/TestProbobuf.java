@@ -1,12 +1,10 @@
 package com.baidu.chunlei.exercise.protobuf;
 
+import com.google.protobuf.ByteString;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-
-import com.google.protobuf.ByteString;
-import com.google.protobuf.InvalidProtocolBufferException;
 
 /**
  * @author luxiaoyu01@baidu.com

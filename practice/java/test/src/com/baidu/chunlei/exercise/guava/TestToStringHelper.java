@@ -1,7 +1,6 @@
 package com.baidu.chunlei.exercise.guava;
 
 import com.google.common.base.Objects;
-import com.google.common.base.Splitter;
 
 /**
  * @author luxiaoyu01@baidu.com

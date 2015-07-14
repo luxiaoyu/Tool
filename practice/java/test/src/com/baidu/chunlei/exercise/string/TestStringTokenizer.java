@@ -1,6 +1,5 @@
 package com.baidu.chunlei.exercise.string;
 
-import com.baidu.lxy.Strings;
 
 /**
  * new StringTokenizer(str, ","); 比 str.split(",");

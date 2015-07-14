@@ -1,6 +1,5 @@
 package com.baidu.chunlei.exercise.array;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 

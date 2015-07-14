@@ -1,7 +1,8 @@
 package com.baidu.chunlei.exercise;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.UUID;
+
+
 
 /**
  * @author luxiaoyu01@baidu.com
@@ -40,9 +41,13 @@ class T {
 	}
 
 	public static void main(String[] args) {
-		for (int i : test()) {
-		    System.out.println(i);
-		}
+//		for (int i : test()) {
+//		    System.out.println(i);
+//		}
+	    System.out.println(UUID.randomUUID());
+	    //#define NAME_MAX 255
+
+
 	}
 	
 	

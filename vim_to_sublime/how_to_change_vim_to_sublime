@@ -2,6 +2,8 @@ Step By Step
 ~~~~~~~~~~~~
 sudo apt-get install curl vim-gui-common
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+# if mac
+brew install gconf
 cp .vimrc ~/.vimrc
 open vim, run ":BundleInstall"
 cp vim-autocomplpop.zip /usr/share/vim/vim73
